@@ -34,6 +34,12 @@ def programme_assemblage(gaussian_blur=True) :
     for i in range(1,nb_images):
         pcles_image_gauche, descripteurs_image_gauche = p_cles_et_descripteurs(image_gauche)
         pcles_image_droite, descripteurs_image_droite = p_cles_et_descripteurs(image_droite)
+        image_gauche_avec_p_cles = cv2.drawKeypoints(image_gauche,pcles_image_gauche,None, color=(0,255,0), flags=0)
+        image_droite_avec_p_cles = cv2.drawKeypoints(image_droite,pcles_image_droite,None, color=(0,255,0), flags=0)
+
+        cv2.imwrite(str(repertoire_projet+"/bloc/")+"image_gauche_p_cles.png",image_gauche_avec_p_cles)
+        cv2.imwrite(str(repertoire_projet+"/bloc/")+"image_droite_p_cles.png",image_droite_avec_p_cles)
+
         image_fusion = assemblage(image_gauche, image_droite, pcles_image_gauche, pcles_image_droite, descripteurs_image_gauche, descripteurs_image_droite)
         if(i==nb_images-1):
             cv2.imwrite(str(repertoire_projet + "/resultat/") + "resultat.png", image_fusion)
