@@ -6,5 +6,3 @@ AMSAF Rim\
 DUROGENE Judyanne\
 GUERRIER Vanessa\
 \
-Encadrant:\
-HOSTIN Marc-Adrien
