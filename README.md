@@ -4,4 +4,3 @@ ALLIES Angélo\
 AMSAF Rim\
 DUROGENE Judyanne\
 GUERRIER Vanessa\
-\
